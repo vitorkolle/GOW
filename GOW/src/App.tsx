@@ -68,16 +68,16 @@ function App() {
           </div>
 
 
-          <div className="h-full w-1/2 flex bg-amber-300 items-center">
-            <button className='h-contain w-contain' onClick={() => { if(index < 1){setIndex(characters.length)} else{setIndex(index - 1)};}}>
+          <div className="h-full w-1/2 flex items-center">
+            <button className='h-contain w-contain cursor-pointer' onClick={() => { if(index == 0){setIndex(characters.length - 1)} else{setIndex(index - 1)};}}>
             <img src={arrow} alt="" />
             </button>
 
             <div className='w-4/5 h-5/6 mx-1'>
-            <img src={actualCharacter.image} alt="" className='w-full h-full'/>
+            <img src={actualCharacter.image} alt="" className='w-full h-full object-cover'/>
             </div>
 
-            <button className='h-contain w-contain' onClick={() => { if(index == characters.length - 1){setIndex(0)}; setIndex(index + 1)}}>
+            <button className='h-contain w-contain cursor-pointer' onClick={() => { if(index == characters.length - 1){setIndex(0)} else {setIndex(index + 1)}} }>
             <img src={arrow} alt="" className='rotate-180 mr-2'/>
             </button>
 
