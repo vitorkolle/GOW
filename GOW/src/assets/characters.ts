@@ -28,19 +28,21 @@ let characters: Character[] = [
         id: 3,
         name: "Freya",
         image: freyaImg,
-        text: "Freya, outrora aliada fiel de Kratos, retorna como uma figura trágica e determinada. Após a morte de seu filho Baldur, ela é consumida pelo luto e pelo desejo de vingança. Porém, ao longo da história, ela se vê dividida entre o ódio e a necessidade de lutar contra um mal maior. Em Ragnarök, Freya representa a dor da perda e a força de uma deusa que, mesmo ferida, não hesita em empunhar sua espada novamente."
+        text: "Freya é uma das personagens mais complexas do jogo. Após perder seu filho Baldur, ela é consumida pelo luto e pela sede de vingança contra Kratos. No entanto, seu arco não é puramente de ódio: ao longo da jornada, ela enfrenta escolhas difíceis que a fazem revisitar seus próprios valores e forças.Como uma deusa da Vanir com vasto conhecimento mágico e uma história marcada por traições, Freya representa a dor da perda, mas também a capacidade de superação. Em Ragnarök, ela transita entre inimiga e aliada, movida por emoções humanas intensas e pelo desejo de impedir que o mundo mergulhe de vez na destruição." 
     },
     {
         id: 4,
         name: "Thor",
         image: thorImg,
-        text: "Violento, brutal e movido por uma fúria quase incontrolável, Thor é a mão direita de Odin e um dos maiores antagonistas do jogo. Ele não é apenas um guerreiro lendário, mas também um pai falho e um homem atormentado por suas próprias ações. Em Ragnarök, ele personifica a força destrutiva dos Aesir — mas também a tragédia de um deus que perdeu o controle de sua humanidade."
+        text: "Thor é apresentado como uma força bruta imparável, diferente das versões idealizadas da mitologia. Em God of War Ragnarök, ele é uma figura devastadora e temida — mas também profundamente trágica. Sua relação com Odin é marcada por controle e medo, e sua identidade como guerreiro lendário esconde um homem atormentado pela culpa, pelo abuso e pela perda.Pai negligente, filho submisso, e instrumento de destruição dos Aesir, Thor carrega mais do que seu poderoso Mjölnir: ele carrega o peso de séculos de violência e servidão. Em sua luta contra Kratos, o confronto é tão emocional quanto físico, e o desfecho de sua história diz muito sobre redenção, legado e liberdade."
+
+
     },
     {
         id: 5,
         name: "Odin",
         image: odinImg,
-        text: "Manipulador, carismático e implacável, Odin é o mestre por trás dos segredos e mentiras que envolvem os Nove Reinos. Ao contrário da figura nobre que muitos imaginam, ele é um tirano que usa o conhecimento como arma e a profecia como escudo. Em Ragnarök, Odin é tanto o inimigo supremo quanto o símbolo da obsessão pelo controle absoluto sobre o destino."
+        text: "Odin, em Ragnarök, é um deus diferente do que se espera. Astuto, manipulador e sempre dois passos à frente, ele se posiciona como mestre dos bastidores, controlando aliados e inimigos com palavras suaves e ameaças veladas.Sua obsessão por conhecimento e controle o transforma em uma figura perigosa — não pela força bruta, como Thor, mas por sua capacidade de enganar, seduzir e prometer o que nunca pretende cumprir. Em muitos aspectos, Odin representa o próprio destino: inescapável, ilusório e implacável. Sua presença no jogo é constante, mesmo quando ausente fisicamente, e seu impacto molda tudo o que Kratos, Atreus e os demais enfrentam."
     }
 ]
 

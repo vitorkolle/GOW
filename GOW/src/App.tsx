@@ -1,5 +1,6 @@
 import './App.css'
 import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import logo from './assets/systemImg/logo.svg'
 import downArrow from './assets/systemImg/downArrow.svg'
 import arrow from './assets/systemImg/arrow.svg'
@@ -12,11 +13,21 @@ function App() {
   const [index, setIndex] = useState(0);
   let actualCharacter = characters[index]
 
+  const nextCharacter = () => {
+    setIndex((index + 1) % characters.length);
+  };
+
+  const previousCharacter = () => {
+    setIndex((index - 1 + characters.length) % characters.length);
+  };
+
+
+
   return (
     <>
 
       {/* Primeira tela */}
-      <div className="h-screen w-contain flex flex-col bg-[url(./assets/systemImg/gameImg.svg)] bg-cover bg-fixed justify-between items-center">
+      <div className="h-screen w-contain flex flex-col bg-[url(./assets/systemImg/gameImg.svg)] bg-cover bg-fixed justify-between items-center scroll-smooth">
 
         {/* Header */}
         <div className="w-full h-contain flex items-start justify-between mt-2">
@@ -54,34 +65,48 @@ function App() {
       </div>
 
       {/* Segunda tela */}
-      <div className="h-screen w-screen flex flex-col bg-[url(./assets/systemImg/background2.svg)] bg-cover bg-fixed justify-between items-center bg-black bg-center overflow-y-hidden">
+      <div className="h-screen w-screen flex flex-col bg-[url(./assets/systemImg/background2.svg)] bg-cover bg-fixed justify-between items-center bg-black bg-center overflow-y-hidden overflow-x-hidden">
 
         <h1 className='text-white text-6xl mt-2 font-[EB-Garamond]'>Personagens</h1>
 
         <div className="h-full w-full flex">
 
-          <div className="h-full w-1/2 mt-10 flex flex-col items-center gap-5">
+          <AnimatePresence mode='wait'>
+            <motion.div
+              key={characters[index].id}
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -50 }}
+              transition={{ duration: 0.5 }}
+              className="flex items-end text-white w-screen h-contain overflow-x-hidden"
+            >
 
-            <h2 className='text-white text-5xl font-[Poltawski-Nowy]'>{actualCharacter.name}</h2>
+              <div className="h-full w-1/2 mt-14 flex flex-col items-center justify-center gap-5">
+                <h2 className='text-white text-5xl font-[Poltawski-Nowy]'>{actualCharacter.name}</h2>
 
-            <p className='text-white text-3xl font-[Poltawski-Nowy] text-center w-10/12'>{actualCharacter.text}</p>
-          </div>
+                <p className='text-white text-3xl font-[Poltawski-Nowy] text-center w-10/12'>{actualCharacter.text}</p>
+              </div>
 
 
-          <div className="h-full w-1/2 flex items-center">
-            <button className='h-contain w-contain cursor-pointer' onClick={() => { if(index == 0){setIndex(characters.length - 1)} else{setIndex(index - 1)};}}>
-            <img src={arrow} alt="" />
-            </button>
+              <div className="h-full w-1/2 flex items-center">
+                <button className='h-contain w-contain cursor-pointer' onClick={() => nextCharacter()}>
+                  <img src={arrow} alt="" />
+                </button>
 
-            <div className='w-4/5 h-5/6 mx-1'>
-            <img src={actualCharacter.image} alt="" className='w-full h-full object-cover'/>
-            </div>
+                <div className='w-4/5 h-5/6 flex justify-center'>
+                  <img src={actualCharacter.image} alt="" className='w-11/12 h-full object-cover' />
+                </div>
 
-            <button className='h-contain w-contain cursor-pointer' onClick={() => { if(index == characters.length - 1){setIndex(0)} else {setIndex(index + 1)}} }>
-            <img src={arrow} alt="" className='rotate-180 mr-2'/>
-            </button>
+                <button className='h-contain w-contain cursor-pointer' onClick={() => previousCharacter()}>
+                  <img src={arrow} alt="" className='rotate-180' />
+                </button>
 
-          </div>
+              </div>
+
+            </motion.div>
+          </AnimatePresence>
+
+
         </div>
 
       </div>
