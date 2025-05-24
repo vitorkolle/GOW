@@ -27,14 +27,14 @@ function App() {
     <>
 
       {/* Primeira tela */}
-      <div className="h-screen w-contain flex flex-col bg-[url(./assets/systemImg/gameImg.svg)] bg-cover bg-fixed justify-between items-center scroll-smooth">
+      <div className="h-screen w-contain flex flex-col bg-[url(./assets/systemImg/gameImg.svg)] bg-cover bg-fixed justify-between items-center">
 
         {/* Header */}
-        <div className="w-full h-contain flex items-start justify-between mt-2">
+        <div className="w-full h-contain flex items-start justify-between mt-2 scroll-smooth">
           <img className='ml-10' src={logo} alt="Logo God of War Ragnarok" />
 
           <nav className='flex w-4/6 justify-center mt-3 gap-20'>
-            <p className="text-white font-[Abel] text-xl"> <a href="">Personagens</a></p>
+            <p className="text-white font-[Abel] text-xl scroll-smooth"> <a href="#characters">Personagens</a></p>
             <p className="text-white font-[Abel] text-xl"> <a href="">Criaturas</a></p>
             <p className="text-white font-[Abel] text-xl"> <a href="">Reinos</a></p>
           </nav>
@@ -55,9 +55,11 @@ function App() {
           </div>
 
 
-          <div className="w-contain h-contain flex flex-col justify-center items-center cursor-pointer mb-10">
+          <div className="w-contain h-contain cursor-pointer mb-10">
+            <a href="#characters" className='flex flex-col items-center'>
             <h1 className='text-white text-3xl font-[Lexend] font-medium'>Saiba Mais</h1>
             <img className='size-10' src={downArrow} alt="Continue" />
+            </a>
           </div>
 
 
@@ -65,7 +67,7 @@ function App() {
       </div>
 
       {/* Segunda tela */}
-      <div className="h-screen w-screen flex flex-col bg-[url(./assets/systemImg/background2.svg)] bg-cover bg-fixed justify-between items-center bg-black bg-center overflow-y-hidden overflow-x-hidden">
+      <div id='characters' className="h-screen w-screen flex flex-col bg-[url(./assets/systemImg/background2.svg)] bg-cover bg-fixed justify-between items-center bg-black bg-center scroll-smooth">
 
         <h1 className='text-white text-6xl mt-2 font-[EB-Garamond]'>Personagens</h1>
 
