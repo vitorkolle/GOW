@@ -30,12 +30,12 @@ function App() {
       <div className="h-screen w-contain flex flex-col bg-[url(./assets/systemImg/gameImg.svg)] bg-cover bg-fixed justify-between items-center">
 
         {/* Header */}
-        <div className="w-full h-contain flex items-start justify-between mt-2 scroll-smooth">
+        <div className="w-full h-contain flex items-start justify-between mt-2">
           <img className='ml-10' src={logo} alt="Logo God of War Ragnarok" />
 
           <nav className='flex w-4/6 justify-center mt-3 gap-20'>
             <p className="text-white font-[Abel] text-xl scroll-smooth"> <a href="#characters">Personagens</a></p>
-            <p className="text-white font-[Abel] text-xl"> <a href="">Criaturas</a></p>
+            <p className="text-white font-[Abel] text-xl"> <a href="#creatures">Criaturas</a></p>
             <p className="text-white font-[Abel] text-xl"> <a href="">Reinos</a></p>
           </nav>
 
@@ -67,7 +67,7 @@ function App() {
       </div>
 
       {/* Segunda tela */}
-      <div id='characters' className="h-screen w-screen flex flex-col bg-[url(./assets/systemImg/background2.svg)] bg-cover bg-fixed justify-between items-center bg-black bg-center scroll-smooth">
+      <div id='characters' className="h-screen w-screen flex flex-col bg-[url(./assets/systemImg/background2.svg)] bg-cover bg-fixed justify-between items-center bg-black bg-center overflow-hidden">
 
         <h1 className='text-white text-6xl mt-2 font-[EB-Garamond]'>Personagens</h1>
 
@@ -80,13 +80,13 @@ function App() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -50 }}
               transition={{ duration: 0.5 }}
-              className="flex items-end text-white w-screen h-contain overflow-x-hidden"
+              className="flex items-end text-white w-screen h-contain overflow-hidden"
             >
 
               <div className="h-full w-1/2 mt-14 flex flex-col items-center justify-center gap-5">
                 <h2 className='text-white text-5xl font-[Poltawski-Nowy]'>{actualCharacter.name}</h2>
 
-                <p className='text-white text-3xl font-[Poltawski-Nowy] text-center w-10/12'>{actualCharacter.text}</p>
+                <p className='text-white text-3xl font-[Poltawski-Nowy] text-center w-10/12 '>{actualCharacter.text}</p>
               </div>
 
 
@@ -95,7 +95,7 @@ function App() {
                   <img src={arrow} alt="" />
                 </button>
 
-                <div className='w-4/5 h-5/6 flex justify-center'>
+                <div className='w-6/8 h-5/6 flex justify-center'>
                   <img src={actualCharacter.image} alt="" className='w-11/12 h-full object-cover' />
                 </div>
 
@@ -111,6 +111,18 @@ function App() {
 
         </div>
 
+      </div>
+
+
+
+
+      {/* Terceira tela */}
+      <div id ='creatures' className='h-screen w-screen bg-[url(./assets/systemImg/background3.svg)] bg-cover bg-fixed bg-black flex flex-col'>
+            <h1 className='text-white text-6xl font-[EB-Garamond] h-1/6 flex items-center ml-20'>Criaturas</h1>
+
+            <div className="h-6/8 w-full flex justify-center items-center bg-amber-400">
+              
+            </div>
       </div>
     </>
   )
